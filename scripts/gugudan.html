@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gugudan2dan</title>
+</head>
+<body>
+    <h1>구구단!</h1>
+    출력할 단수: <input type="text" id="myText" value= >
+    <h2>구구단</h2>
+    <script>
+        var a = 1;
+        var b = 1;
+        var c = 1;
+        var d = Number(prompt("보고 싶은 구구단 숫자를 넣어주세요.", ""));
+
+        while(b<10) {
+            c = Number(d * a);
+            document.write(d + "곱하기 " + a + " 은(는) " + " = " + c + "입니다.");
+            document.write("<p></p>")
+            console.log(d + "곱하기 " + a + " 은(는) " + " = " + c + "입니다.");
+            b = b + 1;
+            a++
+            }
+    </script>
+</body>
+</html>
