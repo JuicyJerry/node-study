@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiplication table(with for statement) </title>
+</head>
+<body>
+    <h1>구구단 맞추기</h1>
+    <script>
+    var n = Number(prompt("원하는 구구단 숫자를 넣어보세요."));
+    if (1<n && n<10) {
+        for (var j=1; j<10; j++) {
+        var q = n * j;
+        document.write("<p></p>");
+        document.write(n + " X " + j + " = " + q + " 입니다.");
+        }
+    }       
+    else {
+            document.write("구구단은 2단부터 9단까지 입니다");
+    }
+    
+    </script>
+</body>
+</html>
