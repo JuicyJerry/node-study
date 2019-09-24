@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gugudan11</title>
+</head>
+<body>
+    <h1>구구단 완결편</h1>
+    <script>
+        gugudan = {}; //객체
+        gugudan.result = []; //배열 ; 객체 안에 배열
+        gugudan.current = -1; // 마지막 단 ( 배열 위치), 이게 골치덩어리야.. 이 코드를 무슨 작성 의도인지 도통 모르겠어.. 이거 주석처리해도 실행은 돼.. 그냥 gugudan.current = n;이라고 하면 안 되는거야?
+        gugudan.calculate = function(n) {
+            this.current = n;
+            for ( var i = 0; i < 9; i++) {
+                this.result[i] = n * ( i + 1 ); // var i = 1;으로 변수 선언하고  this.result[i] = n * i;으로 하는게 더 가독성이 좋지 않나요? 굳이 var i = 0으로 초기화하는 이유가 뭘까요. 강의자도 무슨 차이가 있는지 생각해보라고 하던데 잘 모르겠네요. 구글링해도 나오지 않구요..
+            }
+        }
+
+        gugudan.print = function () {
+            document.write("<h2>" + this.current + "단</h2>");
+            for (var i = 0; i < 9; i++) {
+                document.write(this.current + " * " + (i + 1) + " = " + this.result[i] + "<br>");
+            }
+
+        }
+
+        function main() {
+            for (var i = 2; i <= 9; i++) {
+                gugudan.calculate(i);
+                gugudan.print();
+            }
+        }
+        main();
+    </script>
+        
+</body>
+</html>
