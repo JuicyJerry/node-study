@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>사칙연산 계산 및 출력(calculator)</title>
+</head>
+<!-- 
+    2019.09.30
+    사칙연산 계산 및 출력
+    요구사항: 
+        1. calculator.html을 만든다.
+        2. main()함수를 만들고 호출한다.
+        3. 아무 값이나 사칙연산(덧셈, 뺄셈, 곱셈, 나눗셈)을 통해 계산한 결과 값을 출력하는 프로그램을 구현한다.
+        4. 구현한 프로젝트를 github에 푸시한다.
+ -->
+    <h3>사칙연산 대신 해드립니다.</h3>
+<body>
+    <script>
+        var i = prompt("원하는 계산식을 넣어주세요.");
+        function coconut(i) {
+            var calculator1 = eval(i);
+            var calculator2 = parseInt(calculator1, 10);
+            console.log(" 결과값은 " + calculator2 + " 입니다. ");
+            document.write(" 결과값은 " + calculator2 + " 입니다. ");
+        }
+
+        function main() {
+            console.log("main함수가 실행되었습니다.");
+            coconut(i);
+        }
+        main();
+    </script>
+</body>
+</html>
