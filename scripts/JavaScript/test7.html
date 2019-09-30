@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum() {
+            if(document.getElementById("cell1").value && document.getElementById("cell2").value){
+                document.getElementById("cell3").value = parseInt(document.getElementById("cell1").value) + parseInt(document.getElementById("cell2").value);
+            }
+        }    
+
+        function minus() {
+            if(document.getElementById("cell1").value && document.getElementById("cell2").value){
+                document.getElementById("cell3").value = parseInt(document.getElementById("cell1").value) - parseInt(document.getElementById("cell2").value);
+            }
+        }    
+    </script>
+
+    <form name = "sumform">
+        <input type = "text" name = "cell1" id = "cell1" onkeyup="sum()">
+        <input type = "text" name = "cell2" id = "cell2" onkeyup="sum()">
+        <input type = "text" name = "cell3" id = "cell3">       
+    </form>
+
+    <form name = "minusform">
+            <input type = "text" name = "cell1" id = "cell1" onkeyup="minus()">
+            <input type = "text" name = "cell2" id = "cell2" onkeyup="minus()">
+            <input type = "text" name = "cell3" id = "cell3">       
+        </form>
+</body>
+</html>
