@@ -18,15 +18,10 @@
     <h1>원하는 식을 넣으시오.</h1>
 <body>
     <script>
-        var num = eval(prompt("계산식을 넣으시오"));
-        var num1 = (num * 10);
-        var num2 = num1 / num1;
-        if (num2 !== 0) {
-            document.write("입력하신 값의 결과는 " + 0 + " 입니다.");
-        } else {
-            document.write("입력하신 값의 결과는 " + num + " 입니다.");
-        }
-        console.log(num);
+        var i = prompt("계산식을 넣으시오");
+        var n = eval(i);
+        var q = parseInt(n, 10);
+        document.write("결과값은 " + q +" 입니다.");
     </script>
 </body>
 </html>
