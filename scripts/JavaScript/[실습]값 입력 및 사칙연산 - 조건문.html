@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>값 입력 및 사칙연산 - 조건문</title>
+</head>
+<!-- 요구사항
+사용자에게 2개의 숫자 값과 사칙연산 기호(+, -, *, /) 중 하나를 입력 받는다.
+사용자가 입력한 사칙연산 기호에 따라 사칙연산을 계산한 후 결과를 출력한다.
+예를 들어 사용자는 값 2와 4 입력하고 곱셈(*) 기호를 입력하면 2 * 4의 결과인 8을 출력해야 한다. -->
+<body>
+    <h1>사칙연산 계산</h1>
+    <script>
+        var gs = Number(prompt("원하는 숫자1를 입력하시오."));
+            console.log(gs);
+        var gs1 = prompt("원하는 사칙연산 기호를 넣으시오");
+            console.log(gs1);
+        var gs2 = Number(prompt("원하는 숫자2를 입력하시오."));
+            console.log(gs2);
+
+        var os = (gs + gs2);
+        var os1 = (gs - gs2);
+        var os2 = (gs * gs2);
+        var os3 = (gs / gs2);
+
+        
+        var kings = function () {
+            if (gs1 === "+") {
+                console.log(os);
+            }
+            else if(gs1 === "-") {
+                console.log(os1);
+            } 
+            else if(gs1 === "*"){
+                console.log(os2) 
+            } 
+            else if(gs1 === "/") {
+                console.log(os3);
+            }
+            else {
+                console.log("오류가 발생했습니다.");
+            }
+        }
+
+        function main() {
+        console.log("함수가 실행되었습니다.");
+            kings();
+        }
+        main();
+    </script>
+</body>
+</html>
