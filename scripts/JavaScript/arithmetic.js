@@ -21,6 +21,7 @@ var readInput4 = function() {
 // var readInput5 = function() {
 //     var input = document.getElementById("ans");
 //     console.log(plus.value);}
+// 
 
 
 
