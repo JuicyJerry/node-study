@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test8</title>
+    <title>값 입력 및 사칙연산 - 변수</title>
 </head>
 <!-- 
     2019.09.30~ 10.01
@@ -15,31 +15,30 @@
         3. Prompt()와 html input 객체 중 가능하면 input태그를 사용해보자. -->
 <body>
     <h1>값 입력 및 사칙연산</h1>
-    <div id = "arithmetic"> 숫자1
-        <input id="num1" type = "number">
+    <div id = "arithmetic1"> 숫자1
+        <input id="Num1" type="number">
     </div> 
 
-    <div id = "arithmetic"> 숫자2
-        <input id="num2" type = "number">
+    <div id = "arithmetic2"> 숫자2
+        <input id="Num2" type="number">
     </div> 
-    
 
-	    <div id = "arithmetic">
+	    <div id = "Plus">
 	        <input id="plus" type="hidden">
             <button id="btn1" onclick="readInput1()">더하기(+)</button>
 	    </div> 
 
-	    <div id = "arithmetic"> 
+	    <div id = "Minus"> 
 	        <input id="minus" type="hidden">
 	        <button id="btn2" onclick="readInput2()">빼기(-)</button>
 	    </div>     
 
-	    <div id = "arithmetic">
+	    <div id = "Division">
 	        <input id="division" type="hidden">
 	        <button id="btn3" onclick="readInput3()">나누기(/)</button>
 	    </div> 
 
-	    <div id = "arithmetic">
+	    <div id = "Multiplication">
 	        <input id="mul" type="hidden">
 	        <button id="btn4" onclick="readInput4()">곱하기(*)</button>
 	    </div> 

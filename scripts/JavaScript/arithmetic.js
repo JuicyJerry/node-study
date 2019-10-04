@@ -1,21 +1,26 @@
 var readInput1 = function() {
-    var input = document.getElementById("plus");
-    console.log(plus.value) === document.getElementById(num1.value) + document.getElementById(num2.value);
+    // var input = document.getElementById('Plus');
+    var plus = Number(document.getElementById("Num1").value) + Number(document.getElementById("Num2").value);
+    console.log(plus);
+   
 }
 
 var readInput2 = function() {
-    var input = document.getElementById("minus");
-    console.log(minus.value) = parseInt(console.log("num1").value) - parseInt(console.log("num2").value);
+    // var input = document.getElementById("minus");
+    var Minus = Number(document.getElementById("Num1").value) - Number(document.getElementById("Num2").value);
+    console.log(Minus);
 }
 
 var readInput3 = function() {
-    var input = document.getElementById("division");
-    console.log(division.value) = parseInt(console.log("num1").value) * parseInt(console.log("num2").value);
+    // var input = document.getElementById("division");
+    var Division = Number(document.getElementById("Num1").value) / Number(document.getElementById("Num2").value);
+    console.log(Division);
 }
 
 var readInput4 = function() {
-    var input = document.getElementById("mul");
-    console.log(mul.value) = parseInt(console.log("num1").value) / parseInt(console.log("num2").value);
+    // var input = document.getElementById("mul");
+    var Multiplication = Number(document.getElementById("Num1").value) * Number(document.getElementById("Num2").value);
+    console.log(Multiplication);
 }
 
 // var readInput5 = function() {
