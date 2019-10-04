@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습]값 입력 및 사칙연산 - 조건문(switch~case)</title>
+</head>
+<!-- 요구사항
+사용자에게 2개의 숫자 값과 사칙연산 기호(+, -, *, /) 중 하나를 입력 받는다.
+사용자가 입력한 사칙연산 기호에 따라 사칙연산을 계산한 후 결과를 출력한다.
+예를 들어 사용자는 값 2와 4 입력하고 곱셈(*) 기호를 입력하면 2 * 4의 결과인 8을 출력해야 한다. -->
+<body>
+    <script>
+        var a = Number(prompt("숫자 1"));
+        var c = Number(prompt("숫자 2"));
+        var b = prompt("사칙연산 중 하나를 넣으시오(+,-,*,/)");
+            switch(b) {
+                case '+':
+                    console.log(a+c);
+                    alert(a+c);
+                    break;
+                case '-':
+                    var q = eval(a-c);
+                    console.log(q);
+                    alert(q);
+                    break;
+                case '*':
+                    var s = eval(a*c);
+                    console.log(s);
+                    alert(s);
+                    break;
+                case '/':
+                    var p = eval(a/c);
+                    console.log(p);
+                    alert(p);
+                    break;
+                default:
+                    alert('case default');
+
+            }
+    </script>
+
+</body>
+</html>
