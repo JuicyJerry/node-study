@@ -23,26 +23,34 @@
                 ret[n+2] = document.write(parseInt(Water * Water1));
                 ret[n+3]= document.write(parseInt(Water / Water1));
             }
-            return ret;
+            Summer(n);
         }
         
-        function Winter(Summer) {
-            if (Fire === '+') {
+        function Winter() {
+            var ret = [];
+            for (var n=0; n<1;) {
+                if (Fire === '+') {
                  document.write(Water + " + " + Water1 + " 의 결과값은 " + ret[n] + "입니다.");
-            } else if (Fire === '-') {
-                 document.write(Water + " - " + Water1 + " 의 결과값은 " + ret[n+1] + "입니다.");
-            } else if (Fire === '*') {
-                 document.write(Water + " * " + Water1 + " 의 결과값은 " + ret[n+2] + "입니다.");
-            } else if (Fire === '/') {
-                 document.write(Waterr + " / " + Waterr1 + " 의 결과값은 " + ret[n+3] + "입니다.");
-            }   else {
-                document.write("잘못 입력하셨습니다.");
+                } else if (Fire === '-') {
+                    document.write(Water + " - " + Water1 + " 의 결과값은 " + ret[n+1] + "입니다.");
+                } else if (Fire === '*') {
+                    document.write(Water + " * " + Water1 + " 의 결과값은 " + ret[n+2] + "입니다.");
+                } else if (Fire === '/') {
+                    document.write(Waterr + " / " + Waterr1 + " 의 결과값은 " + ret[n+3] + "입니다.");
+                }   else {
+                    document.write("잘못 입력하셨습니다.");
+                }
             }
+            Winter();
         }
+ 
 
         function main() {
+            var n = 0;
             console.log("함수가 실행되었습니다.");
-            document.write(Winter, Summer);
+            for (var n=0; n<1;){
+                console.log(Winter(), Summer(n));
+            }
         }
         main();
     </script>
