@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습]함수를 활용해 사칙연산 구현</title>
+</head>
+<!-- i.	요구사항
+    1.	메인 함수, 사용자의 값을 입력하는 함수, 출력하는 함수 등 함수로 코드를 나누어 구현한다.
+    2.	사용자의 값을 입력하는 구현은 첫 번째 숫자 값, 사칙연산 기호 및 quit, 두 번째 숫자 값 입력으로 나뉜다. -->
+<body>
+    <script>
+        Water = Number(prompt("첫번째 숫자"));
+        Fire = prompt("사칙 중 하나");
+        Water1 = Number(prompt("두번째 숫자"));
+
+        function Summer(n) {
+            var ret = [];
+            for(var n=0; n<1;){
+                ret[n] = document.write(parseInt(Water + Water1));
+                ret[n+1] = document.write(parseInt(Water - Water1));
+                ret[n+2] = document.write(parseInt(Water * Water1));
+                ret[n+3]= document.write(parseInt(Water / Water1));
+            }
+            return ret;
+        }
+        
+        function Winter(Summer) {
+            if (Fire === '+') {
+                 document.write(Water + " + " + Water1 + " 의 결과값은 " + ret[n] + "입니다.");
+            } else if (Fire === '-') {
+                 document.write(Water + " - " + Water1 + " 의 결과값은 " + ret[n+1] + "입니다.");
+            } else if (Fire === '*') {
+                 document.write(Water + " * " + Water1 + " 의 결과값은 " + ret[n+2] + "입니다.");
+            } else if (Fire === '/') {
+                 document.write(Waterr + " / " + Waterr1 + " 의 결과값은 " + ret[n+3] + "입니다.");
+            }   else {
+                document.write("잘못 입력하셨습니다.");
+            }
+        }
+
+        function main() {
+            console.log("함수가 실행되었습니다.");
+            document.write(Winter, Summer);
+        }
+        main();
+    </script>
+    
+</body>
+</html>
