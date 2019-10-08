@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습]함수를 활용해 사칙연산 구현</title>
+</head>
+<!-- i.	요구사항
+    1.	메인 함수, 사용자의 값을 입력하는 함수, 출력하는 함수 등 함수로 코드를 나누어 구현한다.
+    2.	사용자의 값을 입력하는 구현은 첫 번째 숫자 값, 사칙연산 기호 및 quit, 두 번째 숫자 값 입력으로 나뉜다. -->
+<body>
+    <script>
+        var orange = Number(prompt("첫 번째 숫자 값을 입력하시오."));
+        var pineapple = Number(prompt("두 번째 숫자 값을 입력하시오."));
+        var banana = prompt("사칙연산 기호를 입력하시오.");
+        var pa0 = "+";
+        var pa1 = "-";
+        var pa2 = "*";
+        var pa3 = "/";
+
+        var coconut = function() {
+            if (banana === pa0) {
+                var banana0 = eval(orange + pineapple);
+                console.log(banana0);
+            } else if (banana === pa1) {
+                var banana1 = eval(orange - pineapple);
+                console.log(banana1);
+            } else if (banana === pa2) {
+                var banana2 = eval(orange * pineapple);
+                console.log(banana2);
+            } else if (banana === pa3) {
+                var banana3 = eval(orange / pineapple);
+                console.log(banana3);
+            } else {
+                alert("다시 입력하시오.");
+            }
+            return coconut;
+        }
+
+        var mango = function() {
+            if (pineapple === pa0) {
+                document.write(orange + " + " + pineapple + " 은(는)" + banana0 + " 입니다.");
+            } else if (pineapple === pa1) {
+                document.write(orange + " - " + pineapple + " 은(는)" + banana1 + " 입니다.");
+            } else if (pineapple === pa2) {
+                document.write(orange + " * " + pineapple + " 은(는)" + banana2 + " 입니다.");
+            } else if (pineapple === pa3) {
+                document.write(orange + " / " + pineapple + " 은(는)" + banana3 + " 입니다.");
+            } 
+            return mango;
+        }
+        function main() {
+            console.log("함수가 실행되었습니다.");
+            document.write(coconut());
+            document.write(mango());
+        }
+        main();
+
+    </script> 
+</body>
+</html>
