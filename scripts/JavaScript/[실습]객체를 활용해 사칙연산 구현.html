@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습]객체를 활용해 사칙연산 구현</title>
+</head>
+<!-- i.	요구사항
+    1.	사용자의 값을 입력하는 객체, 사칙연산을 구현하는 객체, 출력하는 객체를 이용해서 프로그램을 구현한다.
+    2.	main 함수를 사용한다. -->
+<body>
+    <script>
+    arith = {};
+    arith.num = [];
+    arith.num[0] = Number(prompt("1번 값"));
+    arith.num[1] = Number(prompt("2번 값"));
+    arith.ari = prompt("사칙연산 기호");
+
+    arith.robot = function() {
+        if (arith.ari === "+" ) {
+            // console.log("냠냠");
+            arith.calplus();
+        }
+        else if ( arith.ari === "-" ) {
+            arith.calminus();
+        }
+        else if ( arith.ari === "*") {
+            arith.calmul();
+        }
+        else if ( arith.ari === "/" ) {
+            arith.caldiv();
+        }
+        else {
+            document.write("다시 입력해주시오")
+        }
+    }
+
+    arith.calplus = function () {
+        // console.log("쩝쩝");
+        this.num[3] = eval(arith.num[0] + arith.ari + arith.num[1]);
+        document.write("결과값은 " + this.num[3] + " 입니다.");
+    }
+    arith.calminus= function () {
+        this.num[4] = eval(this.num[0] + this.ari + this.num[1]);
+        document.write("결과값은 " + this.num[4] + " 입니다.");
+    }
+    arith.calmul = function () {
+        this.num[5] = eval(this.num[0] + this.ari + this.num[1]);
+        document.write("결과값은 " + this.num[5] + " 입니다.");
+    }
+    arith.caldiv = function () {
+        this.num[6] = eval(this.num[0] + this.ari + this.num[1]);
+        document.write("결과값은 " + this.num[6] + " 입니다.");
+    }
+
+    function main() {
+        console.log("함수가 실행되었습니다.");
+        arith.robot();
+    }
+    main();
+
+
+    </script>
+</body>
+</html>
