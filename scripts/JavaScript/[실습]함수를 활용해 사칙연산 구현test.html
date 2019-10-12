@@ -12,9 +12,9 @@
 <body>
     <h1>함수를 활용해 사칙연산 구현</h1>
     <script>
-        var orange = Number(prompt("첫 번째 숫자 값을 입력하시오."));
-        var pineapple = Number(prompt("두 번째 숫자 값을 입력하시오."));      
-        var banana = prompt("사칙연산 기호를 입력하시오."); 
+        var firstNumber = Number(prompt("첫 번째 숫자 값을 입력하시오."));
+        var secondNumber = Number(prompt("두 번째 숫자 값을 입력하시오."));      
+        var arithmetics = prompt("사칙연산 기호를 입력하시오."); 
         var pa0 = "+";
         var pa1 = "-";
         var pa2 = "*";
@@ -22,50 +22,50 @@
 
         var coconut = function() {
             var pa = [];
-            if (banana === "+") {
+            if (arithmetics === "+") {
                 pa = pa0;
             } 
-            else if (banana === "-") {
+            else if (arithmetics === "-") {
                 pa = pa1;
             } 
-            else if (banana === "*") {
+            else if (arithmetics === "*") {
                 pa = pa2;
             } 
-            else if (banana === "/") {
+            else if (arithmetics === "/") {
                 pa = pa3;
             } 
         }
-        coconut();
+        
 
-        var mango = function(coconut) {
-            if (banana === pa0) {
-                var banana0 = eval(orange + pineapple);
-                console.log(banana0);
-                document.write(orange + " + " + pineapple + " 은(는) " + banana0 + " 입니다." + "<br>");
+        var printNumber = function() {
+            if (arithmetics === pa0) {
+                var pritnt0 = eval(firstNumber + secondNumber);
+                console.log(pritnt0);
+                return firstNumber + " + " + secondNumber + " 은(는) " + pritnt0 + " 입니다." + "<br>";
             } 
-            else if (banana === pa1) {
-                var banana1 = eval(orange - pineapple);
-                console.log(banana1);
-                document.write(orange + " - " + pineapple + " 은(는) " + banana1 + " 입니다."+ "<br>");
+            else if (arithmetics === pa1) {
+                var pritnt1 = eval(firstNumber - secondNumber);
+                console.log(pritnt1);
+                return firstNumber + " - " + secondNumber + " 은(는) " + pritnt1 + " 입니다."+ "<br>";
             } 
-            else if (banana === pa2) {
-                var banana2 = eval(orange * pineapple);
-                console.log(banana2);
-                document.write(orange + " * " + pineapple + " 은(는) " + banana2 + " 입니다."+ "<br>");
+            else if (arithmetics === pa2) {
+                var pritnt2 = eval(firstNumber * secondNumber);
+                console.log(pritnt2);
+                return firstNumber + " * " + secondNumber + " 은(는) " + pritnt2 + " 입니다."+ "<br>";
             } 
-            else if (banana === pa3) {
-                var banana3 = eval(orange / pineapple);
-                console.log(banana3);
-                document.write(orange + " / " + pineapple + " 은(는) " + banana3 + " 입니다."+ "<br>");
+            else if (arithmetics === pa3) {
+                var pritnt3 = eval(firstNumber / secondNumber);
+                console.log(pritnt3);
+                return firstNumber + " / " + secondNumber + " 은(는) " + pritnt3 + " 입니다."+ "<br>";
             } 
             else {
                 alert("다시 입력하시오.");
             }
-            return coconut;
+
         }
         function main() {
             console.log("함수가 실행되었습니다.");
-            document.write(mango());
+            document.write(printNumber());
         }
         main();
     </script> 
