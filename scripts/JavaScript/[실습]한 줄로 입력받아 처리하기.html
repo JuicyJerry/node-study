@@ -18,16 +18,21 @@
         <input type="text" id="name" name="name" >
         <button id='btn0' onclick="readInput()" >확인</button>
     </div>
-    
-
-    <!-- <script src="[실습]한 줄로 입력받아 처리하기.js"></script> -->
     <script>
         var readInput = function() {   
-            var focus = document.getElementById("btn0");
-            var splits = focus.split(" ");
-            var plus0 = eval(splits);
-        console.log(plus0);
-    }
+            var input = document.getElementById("name");
+            console.log(input.value);
+            var splits = input.value.split(" ");
+            console.log(splits);
+            console.log(splits.join(''));
+            console.log(eval(splits.join('')));
+            }
     </script>
 </body>
 </html>
+<!-- 
+String.prototype.split()
+split() 메서드는 String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
+
+api: 응용 프로그램에서 사용할 수 있도록 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터 페이스
+interface 역할: 어떤 객체가 있고 그 객체가 특정 인터페이스 사용시 그 객체는 반드시 메소드들을 구현해야 함(하지 않을시 컴파일 조차 x) -->
