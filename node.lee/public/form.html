@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>email form</title>
+</head>
+<body>
+    <form action="email_post" method="post">
+        email: <input type="text" name="email"><br/>
+        <input type="submit">
+    </form>
+    
+    <button class="ajaxsend">ajaxsend</button>
+
+    <div class="result"></div>
+    
+    <script>
+        document.querySelector('.ajaxsend').addEventListener('click', function() {
+            var inputdata = document.forms[0].elements[0].value
+            sendAjax('http://127.0.0.1:3000/ajax_send_email',inputdata);
+        })
+
+        function sendAjax(url, data){
+            var data = {'email' : data};
+            data = JSON.stringify(data); //서버에서 주고 받을 때는 문자열 형태로 주고 받아야 하기 때문에 오브젝트로 할 수 없으므로 json형태로 만들어 주었다.
+            
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Contend-Type', "application/json");
+            xhr.send(data);
+            
+            xhr.addEventListener('load', function() {
+                var result = JSON.parse(xhr.responseText);
+                if(result.result !== "ok") return;
+                document.querySelector(".result").innerHTML = result.email;
+                //output이 indefined로 뜬다. 오타는 없어 보인다. innerHTML을 html()로도 바꿔봤지만 소용없었다.
+            });
+        }
+    </script>
+
+</body>
+</html>
