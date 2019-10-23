@@ -32,7 +32,7 @@
             xhr.addEventListener('load', function() {
                 var result = JSON.parse(xhr.responseText);
                 if(result.result !== "ok") return;
-                document.querySelector(".result").innerHTML = result.email;
+                document.querySelector(".result").innerHTML = result.name;
                 //output이 indefined로 뜬다. 오타는 없어 보인다. innerHTML을 html()로도 바꿔봤지만 소용없었다.
             });
         }
